@@ -1,7 +1,14 @@
 from distutils.core import setup
+from distutils.extension import Extension
 from Cython.Build import cythonize
 
-from distutils.core import setup
+extensions = [
+    Extension("scanner.Scanner", ["scanner/scanner.pyx"],
+        include_dirs = [],
+        libraries = [],
+        library_dirs = []),
+    # Everything but primes.pyx is included here.
+ ]
 
 setup(name='fdemod',
     version='0.1',
@@ -9,6 +16,6 @@ setup(name='fdemod',
     author='Julio C. Estrada',
     author_email='julio@cimat.mx',
     #url='https://www.python.org/sigs/distutils-sig/',
-    #packages=['distutils', 'distutils.command'],
-    ext_modules = cythonize("hello.pyx"),
+    packages=['scanner'],
+    ext_modules = cythonize(extensions),
 )
