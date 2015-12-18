@@ -1,1 +1,4 @@
 * Lets start programming the follower
+
+The follower is an image scanner. We give a map to follow, and a starting
+point. 

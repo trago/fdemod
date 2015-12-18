@@ -1,0 +1,9 @@
+/Build
+/.gitignore~
+/readme.org~
+*.*~
+*.pyc
+/nbproject
+/build
+\#*\#
+.#*
