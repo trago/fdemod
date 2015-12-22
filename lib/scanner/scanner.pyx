@@ -1,5 +1,3 @@
-#!python
-#cython: language_level=3, boundscheck=False
 
 cdef class Scanner:
     def __cinit__(self, saludo):

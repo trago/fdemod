@@ -18,6 +18,5 @@ setup(name='fdemod',
     #url='https://www.python.org/sigs/distutils-sig/',
     package_dir = {'':'lib'},
     packages=['scanner'],
-    ext_modules = cythonize(extensions, 
-                            compiler_directives={'language_lev': 3}),
+    ext_modules = cythonize(extensions),
 )
