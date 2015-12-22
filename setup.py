@@ -3,7 +3,7 @@ from distutils.extension import Extension
 from Cython.Build import cythonize
 
 extensions = [
-    Extension("scanner.scanner", ["lib/scanner/scanner.pyx"],
+    Extension("fdemod._scanner", ["lib/fdemod/_scanner.pyx"],
         include_dirs = [],
         libraries = [],
         library_dirs = []),
@@ -17,6 +17,6 @@ setup(name='fdemod',
     author_email='julio@cimat.mx',
     #url='https://www.python.org/sigs/distutils-sig/',
     package_dir = {'':'lib'},
-    packages=['scanner'],
+    packages=['fdemod'],
     ext_modules = cythonize(extensions),
 )
