@@ -1,10 +1,11 @@
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Build import cythonize
+import numpy
 
 extensions = [
     Extension("fdemod.*", ["fdemod/*.pyx"],
-        include_dirs = [],
+        include_dirs = [numpy.get_include()],
         libraries = [],
         library_dirs = []),
     # Everything but primes.pyx is included here.
